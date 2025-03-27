@@ -121,7 +121,7 @@ const auth = getAuth(app);
 onAuthStateChanged(auth, (user) => {
   if (user && user.photoURL) {
   
-
+     dp=user.photoURL
     // Set the profile picture if available
    
   } else {
@@ -149,5 +149,14 @@ newchat.addEventListener('click',()=>{
   const elements2 = document.querySelectorAll('.ai-chat-box');
   elements2.forEach(element => element.remove());
 });
+
+document.querySelector(".hamburger").addEventListener('click',()=>{
+  //console.log("clicked")
+  const nav = document.querySelector('.mobile-nav');
+  nav.classList.toggle('active');
+   
+})
+// hamburger
+
 
 
