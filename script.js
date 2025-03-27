@@ -63,7 +63,7 @@ function handleChatResponse(userMessage) {
   if (!userMessage.trim()) return;
 
   const html = `
-          <img src=${dp} alt="default-user.png" id="userImage"   width="8%">
+          <img src=${dp} alt="" id="userImage" alt="default-user.png" width="8%">
         <div class="user-chat-area">${userMessage}</div>
         
     `;
@@ -119,14 +119,13 @@ const auth = getAuth(app);
 
 // Check if user is logged in and fetch profile picture
 onAuthStateChanged(auth, (user) => {
-  if (user) {
+  if (user && user.photoURL) {
   
 
     // Set the profile picture if available
-    if (user.photoURL) {
-      dp=user.photoURL;
-    }
+   
   } else {
+    dp='default-user.png'
     console.log("No user logged in");
     // Optionally redirect to login page
     // window.location.href = 'register.html';
@@ -150,25 +149,5 @@ newchat.addEventListener('click',()=>{
   const elements2 = document.querySelectorAll('.ai-chat-box');
   elements2.forEach(element => element.remove());
 });
-
-
-const hamburger = document.getElementById("hamburger");
-const navButtons = document.getElementById("nav-buttons");
-
-hamburger.addEventListener("click", () => {
-    navButtons.classList.toggle("show");
-    hamburger.classList.toggle("active"); // Rotate icon
-});
-
-// Close the menu when clicking outside
-document.addEventListener("click", (event) => {
-    if (!hamburger.contains(event.target) && !navButtons.contains(event.target)) {
-        navButtons.classList.remove("show");
-        hamburger.classList.remove("active");
-    }
-});
-
-
-
 
 
