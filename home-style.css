@@ -312,7 +312,65 @@ body {
     border-radius: 10px;
 }
 
-
+/* Hamburger Styling */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+  }
+  
+  /* Mobile Navigation Styling */
+  .mobile-nav {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .mobile-nav button {
+    
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+ 
+  
+  /* Responsive for Mobile */
+  @media (max-width: 768px) {
+    .hamburger {
+      display: block;
+      color: #311b92;
+    }
+  
+    .mobile-nav {
+      position: absolute;
+      right: 0;
+      top: 60px;
+       
+      width: 0;
+      height: auto;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      padding: 0;
+      z-index: 9999; /* Higher value to keep it on top */
+      transition: width 0.4s ease;
+    }
+  
+    .mobile-nav.active {
+      width: 150px;
+      padding: 10px;
+    }
+  
+    .mobile-nav button {
+      width: 100%;
+      text-align: right;
+      padding: 12px;
+    }
+  }
  
 
 
