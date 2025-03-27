@@ -1,0 +1,168 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #d1c4e9; /* Light violet background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    height: 500px;
+    display: flex;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* Left Side - Banner */
+.banner {
+    width: 50%;
+    background-color: #b39ddb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Right Side - Form Container */
+.form-container {
+    width: 50%;
+    background-color: #ffffff;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Form Styling */
+.form {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form.active {
+    display: flex;
+}
+
+h2 {
+    color: #311b92; /* Deep violet */
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Input Fields */
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #b39ddb;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    background-color: #f3e5f5; /* Light purple */
+    color: #311b92;
+}
+
+input:focus {
+    border-color: #7e57c2;
+}
+
+/* Submit Button */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #9575cd; /* Medium violet */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #7e57c2; /* Darker violet */
+}
+
+/* Toggle Link */
+p {
+    font-size: 14px;
+    color: #4a4a4a;
+}
+
+span {
+    color: #7e57c2;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+span:hover {
+    text-decoration: underline;
+}
+.google-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F3E5F5;
+    color: #555;
+    border: 1px solid #ccc;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    width: 100%;
+  }
+  
+  .google-btn img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    
+  }
+  
+  .google-btn:hover {
+    background-color: #f1f1f1;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+  
+  .google-btn:active {
+    background-color: #eaeaea;
+  }
+  
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .banner {
+        width: 100%;
+        height: 200px;
+    }
+
+    .form-container {
+        width: 100%;
+        padding: 20px;
+    }
+}
