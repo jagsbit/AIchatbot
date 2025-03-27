@@ -211,8 +211,7 @@ body {
 .prompt-area {
     display: flex;
     align-items: center;
-    position: fixed;
-    bottom: 0;
+    
     padding: 10px 20px;
     border-radius: 30px;
 }
